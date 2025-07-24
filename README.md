@@ -1,1 +1,3 @@
 # Database-Manager
+
+An application through which we can manage our data efficiently .....
