@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Users</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+             background-image: url("https://th.bing.com/th/id/OIP._rRyPI15gMtu36B2q8cAugHaF7?w=248&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #5cb85c;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .action-buttons input {
+            margin-right: 5px; /* Add spacing between buttons */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>All Users</h2>
+
+        <table>
+            <tr>
+                <th>Username</th>
+                <th>Password</th>
+                <th>ID</th>
+                <th>Product</th>
+                <th>Orders</th>
+                <th>Cost</th>
+                <th>Actions</th>
+            
+            <!-- Example of a static row. Replace this with dynamic content as needed. -->
+                      
+                
+                <td class="action-buttons">
+                    <!-- Edit Record Form -->
+                    <form action="EditProductServlet" method="post" style="display:inline;">
+                         <input type="hidden" name="username" value="<!-- Username from resultSet -->">
+                         <input type="hidden" name="password" value="<!-- Password from resultSet -->">
+                         <input type="hidden" name="id" value="<!-- ID from resultSet -->">
+                         <input type="hidden" name="product" value="<!-- Product from resultSet -->">
+                         <input type="hidden" name="cost" value="<!-- Cost from resultSet -->">
+                         <input type="hidden" name="orders" value="<!-- Orders from resultSet -->">
+                         <input type="submit" value="Edit">
+                    </form>
+
+                    <!-- Delete Record Form -->
+                    <form action="DeleteProductServlet" method="post" style="display:inline;">
+                        <input type="hidden" name="username" value="exampleUser ">
+                        <input type="submit" value="Delete">
+                    </form>
+                </td>
+            </tr>
+            <!-- End of static row example -->
+
+           
+            
+        </table>
+
+        <a href="dashboard.html" style="margin-top: 20px; display: block; text-align: center;">Back to Dashboard</a>
+    </div>
+</body>
+</html>

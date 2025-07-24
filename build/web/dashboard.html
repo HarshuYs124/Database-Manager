@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0e0e0; /* Matte background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+            background-image: url("https://th.bing.com/th/id/OIP._rRyPI15gMtu36B2q8cAugHaF7?w=248&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 600;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 6px;
+            background-color: #2563eb;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+        .button:hover {
+            background-color: #1d4ed8;
+        }
+        .button.logout {
+            background-color: #d9534f;
+        }
+        .button.logout:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Display a static username; replace with JavaScript for dynamic data if necessary -->
+        <h2>Welcome,  user</h2>
+
+        
+        <!-- Replace the href links with actual paths or URLs -->
+         <a href="AddUserServlet1" class="button">Add User</a>
+        <a href="ShowAllUsersServlet" class="button">Show Users</a>
+        <a href="LogoutServlet" class="button logout">Logout</a>
+    </div>
+
+</body>
+</html>
